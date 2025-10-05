@@ -1,0 +1,50 @@
+2025-10-05 15:27:33,694 - INFO - Generating question for topic Python programming, with difficulty hard, attempt 1
+2025-10-05 15:27:34,758 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 15:27:34,783 - ERROR - Error-Failed to parse MCQQuestion from completion {"question": "What is the difference between `super().__init__(**kwargs)` and `super().__init__(*args, **kwargs)` when calling a parent class constructor in Python?", "options": ["Both are equivalent and can be used interchangeably.", "The first method passes keyword arguments, while the second method passes both positional and keyword arguments.", "The first method is used for Python 3 only, and the second method is used for Python 2 compatibility.", "The first method is used for passing positional arguments, while the second method is used for passing keyword arguments."], "correct_answer": "The first method passes keyword arguments, while the second method passes both positional and keyword arguments."}. Got: 1 validation error for MCQQuestion
+correct_option
+  Field required [type=missing, input_value={'question': 'What is the...and keyword arguments.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE  on attempt 1: Failed to parse MCQQuestion from completion {"question": "What is the difference between `super().__init__(**kwargs)` and `super().__init__(*args, **kwargs)` when calling a parent class constructor in Python?", "options": ["Both are equivalent and can be used interchangeably.", "The first method passes keyword arguments, while the second method passes both positional and keyword arguments.", "The first method is used for Python 3 only, and the second method is used for Python 2 compatibility.", "The first method is used for passing positional arguments, while the second method is used for passing keyword arguments."], "correct_answer": "The first method passes keyword arguments, while the second method passes both positional and keyword arguments."}. Got: 1 validation error for MCQQuestion
+correct_option
+  Field required [type=missing, input_value={'question': 'What is the...and keyword arguments.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-10-05 15:27:34,799 - INFO - Generating question for topic Python programming, with difficulty hard, attempt 2
+2025-10-05 15:27:35,276 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 15:27:35,276 - ERROR - Error-Failed to parse MCQQuestion from completion {"question": "What is the effect of the `isinstance()` function when checking if a variable is a subclass of a certain class in Python?", "options": ["It will return True if the variable is an instance of the class or any of its subclasses", "It will return True only if the variable is an instance of the class itself", "It will raise a TypeError if the variable is not an instance of the class", "It will return False if the variable is an instance of the class or any of its subclasses"], "correct_answer": "It will return True if the variable is an instance of the class or any of its subclasses"}. Got: 1 validation error for MCQQuestion
+correct_option
+  Field required [type=missing, input_value={'question': 'What is the... any of its subclasses'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE  on attempt 2: Failed to parse MCQQuestion from completion {"question": "What is the effect of the `isinstance()` function when checking if a variable is a subclass of a certain class in Python?", "options": ["It will return True if the variable is an instance of the class or any of its subclasses", "It will return True only if the variable is an instance of the class itself", "It will raise a TypeError if the variable is not an instance of the class", "It will return False if the variable is an instance of the class or any of its subclasses"], "correct_answer": "It will return True if the variable is an instance of the class or any of its subclasses"}. Got: 1 validation error for MCQQuestion
+correct_option
+  Field required [type=missing, input_value={'question': 'What is the... any of its subclasses'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-10-05 15:27:35,276 - INFO - Generating question for topic Python programming, with difficulty hard, attempt 3
+2025-10-05 15:27:35,783 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 15:27:35,789 - ERROR - Error-Failed to parse MCQQuestion from completion {"question": "What is the result of the following Python expression: list comprehension [x**2 for x in range(5)]?", "options": ["[0, 1, 4, 9, 16]", "[0, 1, 4, 16, 25]", "[0, 1, 4, 9, 36]", "[0, 1, 4, 25, 36]"], "correct_answer": "[0, 1, 4, 9, 16]"}. Got: 1 validation error for MCQQuestion
+correct_option
+  Field required [type=missing, input_value={'question': 'What is the...er': '[0, 1, 4, 9, 16]'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE  on attempt 3: Failed to parse MCQQuestion from completion {"question": "What is the result of the following Python expression: list comprehension [x**2 for x in range(5)]?", "options": ["[0, 1, 4, 9, 16]", "[0, 1, 4, 16, 25]", "[0, 1, 4, 9, 36]", "[0, 1, 4, 25, 36]"], "correct_answer": "[0, 1, 4, 9, 16]"}. Got: 1 validation error for MCQQuestion
+correct_option
+  Field required [type=missing, input_value={'question': 'What is the...er': '[0, 1, 4, 9, 16]'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-10-05 15:27:35,789 - ERROR - Failed to generate MCQ question: Failed to generate question after 3 attempts | Error: Failed to parse MCQQuestion from completion {"question": "What is the result of the following Python expression: list comprehension [x**2 for x in range(5)]?", "options": ["[0, 1, 4, 9, 16]", "[0, 1, 4, 16, 25]", "[0, 1, 4, 9, 36]", "[0, 1, 4, 25, 36]"], "correct_answer": "[0, 1, 4, 9, 16]"}. Got: 1 validation error for MCQQuestion
+correct_option
+  Field required [type=missing, input_value={'question': 'What is the...er': '[0, 1, 4, 9, 16]'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE  | File: C:\Users\pheno\Gen AI Projects\LLMOps and AIOps\Studdy Buddy AI\src\generator\question_generator.py | Line: 20
+2025-10-05 15:39:36,487 - INFO - Generating question for topic Python programming with difficulty hard
+2025-10-05 15:39:37,491 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 15:39:37,507 - INFO - Sucesfully parsed the question
+2025-10-05 15:39:37,507 - INFO - Generated a valid MCQ Question
+2025-10-05 15:39:37,507 - INFO - Generating question for topic Python programming with difficulty hard
+2025-10-05 15:39:37,915 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 15:39:37,917 - INFO - Sucesfully parsed the question
+2025-10-05 15:39:37,917 - INFO - Generated a valid MCQ Question
+2025-10-05 15:39:37,917 - INFO - Generating question for topic Python programming with difficulty hard
+2025-10-05 15:39:38,211 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-05 15:39:38,211 - INFO - Sucesfully parsed the question
+2025-10-05 15:39:38,211 - INFO - Generated a valid MCQ Question
