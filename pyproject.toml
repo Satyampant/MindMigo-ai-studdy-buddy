@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Studdy-buddy-ai"
+version = "0.1.0"
+description = "An AI studdy buddy."
+authors = [
+    { name = "Satyam", email = "satyampant420@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain",
+    "langchain_groq",
+    "streamlit",
+    "pandas",
+    "python-dotenv",
+    "ipykernel>=6.30.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"] 
