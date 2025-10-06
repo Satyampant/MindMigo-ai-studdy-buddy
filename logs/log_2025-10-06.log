@@ -1,0 +1,186 @@
+2025-10-06 10:49:31,210 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:49:32,057 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:49:32,086 - INFO - Sucesfully parsed the question
+2025-10-06 10:49:32,086 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:49:32,086 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:49:32,334 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:49:32,334 - INFO - Sucesfully parsed the question
+2025-10-06 10:49:32,334 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:49:32,334 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:49:32,541 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:49:32,550 - INFO - Sucesfully parsed the question
+2025-10-06 10:49:32,550 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:49:32,550 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:49:32,855 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:49:32,855 - INFO - Sucesfully parsed the question
+2025-10-06 10:49:32,855 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:49:32,855 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:49:33,057 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:49:33,057 - INFO - Sucesfully parsed the question
+2025-10-06 10:49:33,057 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:52:24,254 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:52:25,088 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:52:25,088 - INFO - Sucesfully parsed the question
+2025-10-06 10:52:25,088 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:52:25,088 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:52:25,271 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:52:25,273 - INFO - Sucesfully parsed the question
+2025-10-06 10:52:25,273 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:52:33,104 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:52:33,588 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:52:33,593 - INFO - Sucesfully parsed the question
+2025-10-06 10:52:33,595 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:52:33,595 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:52:33,796 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:52:33,799 - INFO - Sucesfully parsed the question
+2025-10-06 10:52:33,799 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:55:48,330 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:55:48,962 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:55:48,993 - INFO - Sucesfully parsed the question
+2025-10-06 10:55:48,993 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:55:48,993 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:55:49,433 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:55:49,433 - INFO - Sucesfully parsed the question
+2025-10-06 10:55:49,433 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:55:49,433 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:55:49,639 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:55:49,644 - INFO - Sucesfully parsed the question
+2025-10-06 10:55:49,644 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:55:56,795 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:55:57,361 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:55:57,361 - INFO - Sucesfully parsed the question
+2025-10-06 10:55:57,361 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:55:57,361 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:55:57,666 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:55:57,676 - INFO - Sucesfully parsed the question
+2025-10-06 10:55:57,676 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:55:57,676 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:55:57,876 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:55:57,881 - INFO - Sucesfully parsed the question
+2025-10-06 10:55:57,881 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:56:13,500 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:56:13,958 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:56:13,960 - INFO - Sucesfully parsed the question
+2025-10-06 10:56:13,960 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:56:13,960 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:56:14,264 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:56:14,267 - INFO - Sucesfully parsed the question
+2025-10-06 10:56:14,267 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:56:14,267 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:56:14,561 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:56:14,573 - INFO - Sucesfully parsed the question
+2025-10-06 10:56:14,573 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:58:45,521 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:58:46,116 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:58:46,149 - INFO - Sucesfully parsed the question
+2025-10-06 10:58:46,149 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:58:46,150 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:58:46,354 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:58:46,354 - INFO - Sucesfully parsed the question
+2025-10-06 10:58:46,354 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 10:58:46,354 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 10:58:46,555 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 10:58:46,555 - INFO - Sucesfully parsed the question
+2025-10-06 10:58:46,555 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:01:19,299 - INFO - Generating question for topic Python programming with difficulty easy
+2025-10-06 11:01:20,229 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:01:20,240 - INFO - Sucesfully parsed the question
+2025-10-06 11:01:20,240 - INFO - Generated a valid MCQ Question
+2025-10-06 11:08:53,141 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:08:53,922 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:08:53,922 - INFO - Sucesfully parsed the question
+2025-10-06 11:08:53,922 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:08:53,922 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:08:54,237 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:08:54,245 - INFO - Sucesfully parsed the question
+2025-10-06 11:08:54,245 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:08:54,245 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:08:54,455 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:08:54,463 - INFO - Sucesfully parsed the question
+2025-10-06 11:08:54,463 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:09:56,302 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:09:56,963 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:09:56,966 - INFO - Sucesfully parsed the question
+2025-10-06 11:09:56,966 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:09:56,966 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:09:57,137 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:09:57,137 - INFO - Sucesfully parsed the question
+2025-10-06 11:09:57,137 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:09:57,137 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:09:57,449 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:09:57,455 - INFO - Sucesfully parsed the question
+2025-10-06 11:09:57,455 - ERROR - Failed to generate fillups : Fill in blanks should contain '___'
+2025-10-06 11:11:30,333 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:11:30,948 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:11:30,954 - INFO - Sucesfully parsed the question
+2025-10-06 11:11:30,954 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:11:30,954 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:11:31,152 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:11:31,152 - INFO - Sucesfully parsed the question
+2025-10-06 11:11:31,152 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:11:31,152 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:11:31,352 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:11:31,362 - INFO - Sucesfully parsed the question
+2025-10-06 11:11:31,362 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 11:14:19,356 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:14:20,238 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:14:20,272 - INFO - Sucesfully parsed the question
+2025-10-06 11:14:20,272 - INFO - Generated a valid MCQ Question
+2025-10-06 11:14:20,272 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:14:20,653 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:14:20,673 - ERROR - Error coming : Failed to parse MCQQuestion from completion {"question": "What does the 'if __name__ == '__main__'"}. Got: 2 validation errors for MCQQuestion
+options
+  Field required [type=missing, input_value={'question': "What does t...__name__ == '__main__'"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+correct_answer
+  Field required [type=missing, input_value={'question': "What does t...__name__ == '__main__'"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-10-06 11:14:20,673 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:14:20,968 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:14:20,968 - INFO - Sucesfully parsed the question
+2025-10-06 11:14:20,968 - INFO - Generated a valid MCQ Question
+2025-10-06 11:15:08,371 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:15:09,063 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:15:09,073 - INFO - Sucesfully parsed the question
+2025-10-06 11:15:09,073 - INFO - Generated a valid MCQ Question
+2025-10-06 11:15:09,073 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:15:09,370 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:15:09,370 - INFO - Sucesfully parsed the question
+2025-10-06 11:15:09,370 - INFO - Generated a valid MCQ Question
+2025-10-06 11:15:09,370 - INFO - Generating question for topic Python with difficulty medium
+2025-10-06 11:15:09,839 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:15:09,843 - INFO - Sucesfully parsed the question
+2025-10-06 11:15:09,843 - INFO - Generated a valid MCQ Question
+2025-10-06 11:27:31,655 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 11:27:32,693 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:27:32,717 - INFO - Sucesfully parsed the question
+2025-10-06 11:27:32,717 - INFO - Generated a valid MCQ Question
+2025-10-06 11:27:32,717 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 11:27:32,998 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:27:33,002 - INFO - Sucesfully parsed the question
+2025-10-06 11:27:33,002 - INFO - Generated a valid MCQ Question
+2025-10-06 11:27:33,002 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 11:27:33,299 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 11:27:33,301 - INFO - Sucesfully parsed the question
+2025-10-06 11:27:33,303 - INFO - Generated a valid MCQ Question
+2025-10-06 12:13:43,705 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 12:13:44,564 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 12:13:44,609 - INFO - Sucesfully parsed the question
+2025-10-06 12:13:44,609 - INFO - Generated a valid MCQ Question
+2025-10-06 12:13:44,609 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 12:13:44,971 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 12:13:44,971 - INFO - Sucesfully parsed the question
+2025-10-06 12:13:44,974 - INFO - Generated a valid MCQ Question
+2025-10-06 12:13:44,974 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 12:13:45,265 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 12:13:45,280 - INFO - Sucesfully parsed the question
+2025-10-06 12:13:45,280 - INFO - Generated a valid MCQ Question
+2025-10-06 12:14:02,358 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 12:14:02,882 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 12:14:02,882 - INFO - Sucesfully parsed the question
+2025-10-06 12:14:02,882 - INFO - Generated a valid Fill in Blanks Question
+2025-10-06 12:14:02,882 - INFO - Generating question for topic python with difficulty medium
+2025-10-06 12:14:03,107 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-06 12:14:03,107 - INFO - Sucesfully parsed the question
+2025-10-06 12:14:03,107 - INFO - Generated a valid Fill in Blanks Question

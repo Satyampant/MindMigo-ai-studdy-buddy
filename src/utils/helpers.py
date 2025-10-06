@@ -51,26 +51,35 @@ class QuizManager:
             st.markdown(f"**Question {i+1} : {q['question']}**")
 
             if q['type']=='MCQ':
-                user_answer = st.radio(
-                    f"Select and answer for Question {i+1}",
+                # Store the answer directly in session state via the key
+                st.radio(
+                    f"Select an answer for Question {i+1}",
                     q['options'],
                     key=f"mcq_{i}"
                 )
 
-                self.user_answers.append(user_answer)
-
             else:
-                user_answer=st.text_input(
+                # Store the answer directly in session state via the key
+                st.text_input(
                     f"Fill in the blank for Question {i+1}",
                     key = f"fill_blank_{i}"
                 )
 
-                self.user_answers.append(user_answer)
-
     def evaluate_quiz(self):
         self.results=[]
+        self.user_answers=[]
 
-        for i, (q,user_ans) in enumerate(zip(self.questions,self.user_answers)):
+        # Collect user answers from session state
+        for i, q in enumerate(self.questions):
+            if q['type'] == 'MCQ':
+                user_ans = st.session_state.get(f"mcq_{i}", q['options'][0])
+            else:
+                user_ans = st.session_state.get(f"fill_blank_{i}", "")
+            
+            self.user_answers.append(user_ans)
+
+        # Evaluate answers
+        for i, (q, user_ans) in enumerate(zip(self.questions, self.user_answers)):
             result_dict = {
                 'question_number' : i+1,
                 'question': q['question'],
@@ -119,4 +128,3 @@ class QuizManager:
         except Exception as e:
             st.error(f"Failed to save results {e}")
             return None
-            

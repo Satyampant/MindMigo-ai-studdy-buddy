@@ -1,0 +1,4 @@
+question_number,question,question_type,user_answer,correct_answer,is_correct,options
+1,What is the purpose of the 'try-except' block in Python?,MCQ,To handle exceptions and errors,To handle exceptions and errors,True,"['To add comments to code', 'To create loops', 'To handle exceptions and errors', 'To define functions']"
+2,What is the purpose of the 'with' statement when opening a file in Python?,MCQ,To read from the file,To handle exceptions,False,"['To read from the file', 'To write to the file', 'To handle exceptions', 'To manage file descriptor']"
+3,What is the purpose of the 'with' keyword when working with files in Python?,MCQ,To create a new file,To open and automatically close files,False,"['To read and write files in binary mode', 'To open and automatically close files', 'To read files in text mode', 'To create a new file']"
