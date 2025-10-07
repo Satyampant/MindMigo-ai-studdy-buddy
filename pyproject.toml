@@ -18,6 +18,8 @@ dependencies = [
     "pandas",
     "python-dotenv",
     "ipykernel>=6.30.1",
+    "langchain-experimental>=0.3.4",
+    "pyvis>=0.3.2",
 ]
 
 [tool.setuptools.packages.find]
