@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studdy Buddy AI - Your Learning Companion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">Studdy Buddy AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#quiz" class="nav-link" data-section="quiz">Quiz Generator</a>
+                <a href="#knowledge-graph" class="nav-link" data-section="knowledge-graph">Knowledge Graph</a>
+                <a href="#daily-problem" class="nav-link" data-section="daily-problem">Daily Challenge</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section active">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <span class="gradient-text">Studdy Buddy AI</span></h1>
+                <p class="hero-subtitle">Your intelligent learning companion powered by AI. Generate quizzes, visualize knowledge graphs, and challenge yourself daily.</p>
+                <div class="hero-features">
+                    <div class="feature-card">
+                        <span class="feature-icon">📝</span>
+                        <h3>Quiz Generator</h3>
+                        <p>Create custom quizzes on any topic with multiple difficulty levels</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🕸️</span>
+                        <h3>Knowledge Graph</h3>
+                        <p>Visualize complex topics as interactive knowledge graphs</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h3>Daily Challenge</h3>
+                        <p>Test your skills with a new challenging problem every day</p>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="navigateToSection('quiz')">Generate Quiz</button>
+                    <button class="btn btn-secondary" onclick="navigateToSection('daily-problem')">Daily Challenge</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Generator Section -->
+    <section id="quiz" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📝 Quiz Generator</h2>
+                <p class="section-description">Create personalized quizzes on any topic with customizable difficulty and question types</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Quiz Form -->
+                <div class="form-container">
+                    <form id="quiz-form" class="form">
+                        <div class="form-group">
+                            <label for="quiz-topic" class="form-label">Topic</label>
+                            <input type="text" id="quiz-topic" class="form-input" placeholder="e.g., Python programming, Machine Learning" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="question-type" class="form-label">Question Type</label>
+                            <select id="question-type" class="form-select" required>
+                                <option value="Multiple Choice">Multiple Choice</option>
+                                <option value="Fill in the blank">Fill in the Blank</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="difficulty" class="form-label">Difficulty Level</label>
+                            <div class="difficulty-options">
+                                <label class="radio-card">
+                                    <input type="radio" name="difficulty" value="easy" required>
+                                    <span class="radio-label">
+                                        <span class="radio-icon">😊</span>
+                                        <span>Easy</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="difficulty" value="medium" checked required>
+                                    <span class="radio-label">
+                                        <span class="radio-icon">🤔</span>
+                                        <span>Medium</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="difficulty" value="hard" required>
+                                    <span class="radio-label">
+                                        <span class="radio-icon">🔥</span>
+                                        <span>Hard</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="num-questions" class="form-label">Number of Questions: <span id="num-display">5</span></label>
+                            <input type="range" id="num-questions" class="form-range" min="1" max="10" value="5">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="generate-quiz-btn">
+                            <span class="btn-text">Generate Quiz</span>
+                            <span class="btn-loader" style="display: none;">
+                                <span class="spinner"></span>
+                                Generating...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Quiz Results -->
+                <div class="results-container">
+                    <div id="quiz-placeholder" class="placeholder">
+                        <span class="placeholder-icon">📋</span>
+                        <p>Your generated quiz will appear here</p>
+                    </div>
+                    <div id="quiz-results" class="quiz-results" style="display: none;">
+                        <!-- Results will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Graph Section -->
+    <section id="knowledge-graph" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🕸️ Knowledge Graph Generator</h2>
+                <p class="section-description">Visualize topics and concepts as interactive knowledge graphs</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- KG Form -->
+                <div class="form-container">
+                    <form id="kg-form" class="form">
+                        <div class="form-group">
+                            <label class="form-label">Input Type</label>
+                            <div class="toggle-group">
+                                <button type="button" class="toggle-btn active" data-type="topic">Topic</button>
+                                <button type="button" class="toggle-btn" data-type="text">Custom Text</button>
+                            </div>
+                        </div>
+
+                        <div id="topic-input-group" class="form-group">
+                            <label for="kg-topic" class="form-label">Topic</label>
+                            <input type="text" id="kg-topic" class="form-input" placeholder="e.g., Neural Networks, Quantum Computing">
+                        </div>
+
+                        <div id="text-input-group" class="form-group" style="display: none;">
+                            <label for="kg-text" class="form-label">Custom Text</label>
+                            <textarea id="kg-text" class="form-textarea" rows="6" placeholder="Enter your text here to generate a knowledge graph..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="generate-kg-btn">
+                            <span class="btn-text">Generate Knowledge Graph</span>
+                            <span class="btn-loader" style="display: none;">
+                                <span class="spinner"></span>
+                                Generating...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- KG Results -->
+                <div class="results-container">
+                    <div id="kg-placeholder" class="placeholder">
+                        <span class="placeholder-icon">🌐</span>
+                        <p>Your knowledge graph will appear here</p>
+                    </div>
+                    <div id="kg-results" class="kg-results" style="display: none;">
+                        <div class="kg-controls">
+                            <button class="btn btn-secondary btn-sm" onclick="openGraphFullscreen()">
+                                <span>🔍</span> View Fullscreen
+                            </button>
+                        </div>
+                        <div id="kg-iframe-container">
+                            <!-- Knowledge graph will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Problem Section -->
+    <section id="daily-problem" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Daily Challenge</h2>
+                <p class="section-description">Test your skills with today's challenging problem</p>
+            </div>
+
+            <div class="daily-problem-container">
+                <div id="daily-problem-loading" class="loading-state">
+                    <span class="spinner-large"></span>
+                    <p>Loading today's challenge...</p>
+                </div>
+                <div id="daily-problem-content" style="display: none;">
+                    <!-- Daily problem will be loaded here -->
+                </div>
+            </div>
+
+            <div class="daily-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">🔥</span>
+                    <span class="stat-value" id="streak-count">0</span>
+                    <span class="stat-label">Day Streak</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">✅</span>
+                    <span class="stat-value" id="solved-count">0</span>
+                    <span class="stat-label">Problems Solved</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-value" id="accuracy-rate">0%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast-container"></div>
+
+    <!-- Modal for Fullscreen Graph -->
+    <div id="graph-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Knowledge Graph</h3>
+                <button class="modal-close" onclick="closeGraphModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="graph-modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/knowledgeGraph.js"></script>
+    <script src="js/dailyProblem.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

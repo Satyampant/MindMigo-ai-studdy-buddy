@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 import pandas as pd
+import asyncio
 from src.generator.question_generator import QuestionGenerator
 
 
@@ -22,7 +23,8 @@ class QuizManager:
         try:
             for _ in range(num_questions):
                 if question_type == "Multiple Choice":
-                    question = generator.generate_mcq(topic,difficulty.lower())
+                    # Run async function in sync context
+                    question = asyncio.run(generator.generate_mcq(topic, difficulty.lower()))
 
                     self.questions.append({
                         'type' : 'MCQ',
@@ -32,7 +34,8 @@ class QuizManager:
                     })
 
                 else:
-                    question = generator.generate_fill_blank(topic,difficulty.lower())
+                    # Run async function in sync context
+                    question = asyncio.run(generator.generate_fill_blank(topic, difficulty.lower()))
 
                     self.questions.append({
                         'type' : 'Fill in the blank',
@@ -40,7 +43,7 @@ class QuizManager:
                         'correct_answer': question.answer
                     })
         except Exception as e:
-            st.error(f"Error generating question {e}")
+            st.error(f"Error generating question: {e}")
             return False
         
         return True
