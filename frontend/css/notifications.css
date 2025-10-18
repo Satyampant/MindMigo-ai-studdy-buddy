@@ -1,0 +1,218 @@
+/* Real-Time Notification Styles */
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast-info { border-left: 4px solid #667eea; }
+.toast-success { border-left: 4px solid #00b894; }
+.toast-warning { border-left: 4px solid #fdcb6e; }
+.toast-error { border-left: 4px solid #ff6b6b; }
+
+/* Floating XP Animation */
+.xp-float {
+    position: fixed;
+    top: 50%;
+    font-size: 48px;
+    font-weight: bold;
+    color: #667eea;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    pointer-events: none;
+    z-index: 9998;
+    animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-200px) scale(1.5); opacity: 0; }
+}
+
+/* Notification Modals */
+.notif-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-card {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    animation: zoomIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Level Up Modal */
+.level-icon {
+    font-size: 120px;
+    animation: spinGlow 1s ease infinite;
+}
+
+@keyframes spinGlow {
+    0%, 100% { transform: rotate(0deg) scale(1); filter: drop-shadow(0 0 20px rgba(255,215,0,0.8)); }
+    50% { transform: rotate(180deg) scale(1.1); filter: drop-shadow(0 0 40px rgba(255,215,0,1)); }
+}
+
+.level-title {
+    font-size: 48px;
+    margin: 20px 0;
+    background: linear-gradient(45deg, #667eea, #764ba2, #ffeaa7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.level-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2d3436;
+    margin-bottom: 24px;
+}
+
+/* Badge Unlock Modal */
+.badge-icon-large {
+    font-size: 120px;
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+.badge-title {
+    font-size: 36px;
+    color: #2d3436;
+    margin: 20px 0 10px;
+}
+
+.badge-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #667eea;
+    margin: 10px 0;
+}
+
+.badge-desc {
+    font-size: 16px;
+    color: #636e72;
+    margin-bottom: 24px;
+}
+
+.modal-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.modal-btn:active {
+    transform: translateY(0);
+}
+
+/* Confetti Animation */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Notification Preferences Toggle */
+.notif-preferences {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 9997;
+}
+
+.notif-preferences button {
+    background: white;
+    border: 2px solid #e1e8ed;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.notif-preferences button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

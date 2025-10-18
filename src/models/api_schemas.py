@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional
+from datetime import datetime
 
 # --- Quiz Schemas ---
 
@@ -44,3 +45,23 @@ class DailyProblemResponse(BaseModel):
     question: str
     options: List[str]
     correct_answer: str
+
+# --- Chat Schemas ---
+
+class ChatRequest(BaseModel):
+    """Request schema for sending a chat message to AI tutor."""
+    student_id: str = Field(..., description="Unique identifier for the student.")
+    message: str = Field(..., description="The student's question or message.")
+    conversation_id: Optional[str] = Field(None, description="ID of existing conversation, null for new chat.")
+
+class ChatMessage(BaseModel):
+    """Structure for a single message in chat history."""
+    role: str = Field(..., description="Message role: 'student' or 'tutor'.")
+    content: str = Field(..., description="The message content.")
+    timestamp: datetime = Field(default_factory=datetime.utcnow, description="When the message was created.")
+
+class ChatResponse(BaseModel):
+    """Response schema for AI tutor chat."""
+    reply: str = Field(..., description="The AI tutor's response.")
+    conversation_id: str = Field(..., description="Unique ID for this conversation session.")
+    message_history: List[ChatMessage] = Field(default_factory=list, description="Recent conversation context.")

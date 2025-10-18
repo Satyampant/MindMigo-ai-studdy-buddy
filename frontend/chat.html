@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor Chat - Studdy Buddy AI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-title">
+                <span class="chat-icon">🤖</span>
+                <div>
+                    <h2>AI Tutor</h2>
+                    <p class="chat-subtitle">Ask me anything!</p>
+                </div>
+            </div>
+            <button class="btn-icon" onclick="clearChat()" title="New Conversation">
+                <span>🔄</span>
+            </button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="welcome-message">
+                <span class="welcome-icon">👋</span>
+                <h3>Welcome to AI Tutor!</h3>
+                <p>Ask me anything about your studies. I'm here to help explain concepts, solve problems, and guide your learning journey.</p>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <form id="chatForm" class="chat-form">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    class="chat-input" 
+                    placeholder="Ask a question... (e.g., Explain Pythagoras theorem)" 
+                    autocomplete="off"
+                    required
+                />
+                <button type="submit" class="btn-send" id="sendBtn">
+                    <span class="send-icon">➤</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

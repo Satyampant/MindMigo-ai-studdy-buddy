@@ -126,28 +126,30 @@ class DailyProblem {
         this.selectedAnswer = optionElement.dataset.option;
     }
 
-    handleSubmit() {
+    async handleSubmit() {
         if (!this.selectedAnswer) {
             showToast('warning', 'No Selection', 'Please select an answer before submitting');
             return;
         }
         
         const isCorrect = this.selectedAnswer === this.currentProblem.correct_answer;
+        const studentId = sessionStorage.getItem('student_id');
         
-        // Update stats
+        try {
+            const url = `${CONFIG.ENDPOINTS.DAILY_PROBLEM_SUBMIT}?student_id=${studentId}&is_correct=${isCorrect}`;
+            await api.post(url, {});
+            if (typeof refreshGamification === 'function') {
+                await refreshGamification();
+            }
+        } catch (error) {
+            console.error('Failed to submit daily problem:', error);
+        }
+        
         this.updateProblemStats(isCorrect);
-        
-        // Show feedback
         this.showFeedback(isCorrect);
-        
-        // Disable further attempts
         document.getElementById('submit-answer-btn').disabled = true;
         document.getElementById('submit-answer-btn').innerHTML = '✅ Already Solved Today';
-        
-        // Save that problem was solved today
         saveToStorage(CONFIG.STORAGE_KEYS.LAST_PROBLEM_DATE, getTodayString());
-        
-        // Update stats display
         this.updateStats();
     }
 

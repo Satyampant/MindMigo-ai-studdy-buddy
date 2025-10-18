@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studdy Buddy AI - Your Learning Companion</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="css/quiz-results.css">
+    <link rel="stylesheet" href="css/chat.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/gamification.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -19,9 +25,12 @@
             </div>
             <div class="nav-links">
                 <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#gamification" class="nav-link" data-section="gamification">🎮 Gamification</a>
                 <a href="#quiz" class="nav-link" data-section="quiz">Quiz Generator</a>
                 <a href="#knowledge-graph" class="nav-link" data-section="knowledge-graph">Knowledge Graph</a>
                 <a href="#daily-problem" class="nav-link" data-section="daily-problem">Daily Challenge</a>
+                <a href="#ai-tutor" class="nav-link" data-section="ai-tutor">AI Tutor</a>
+                <a href="#progress" class="nav-link" data-section="progress">My Progress</a>
             </div>
         </div>
     </nav>
@@ -44,14 +53,42 @@
                         <p>Visualize complex topics as interactive knowledge graphs</p>
                     </div>
                     <div class="feature-card">
+                        <span class="feature-icon">💬</span>
+                        <h3>AI Tutor</h3>
+                        <p>Chat with an intelligent AI tutor to understand any concept</p>
+                    </div>
+                    <div class="feature-card">
                         <span class="feature-icon">🎯</span>
                         <h3>Daily Challenge</h3>
                         <p>Test your skills with a new challenging problem every day</p>
                     </div>
                 </div>
                 <div class="hero-cta">
-                    <button class="btn btn-primary" onclick="navigateToSection('quiz')">Generate Quiz</button>
-                    <button class="btn btn-secondary" onclick="navigateToSection('daily-problem')">Daily Challenge</button>
+                    <button class="btn btn-primary" id="hero-ai-tutor-btn">Ask AI Tutor</button>
+                    <button class="btn btn-secondary" id="hero-quiz-btn">Generate Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamification Section -->
+    <section id="gamification" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎮 Your Gamification Dashboard</h2>
+                <p class="section-description">Track your XP, badges, streaks, and climb the leaderboard!</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px;">
+                <div>
+                    <h3 class="section-subtitle">⚡ Your Progress</h3>
+                    <div id="xp-progress-container"></div>
+                    <h3 class="section-subtitle" style="margin-top: 24px;">🏆 Badge Collection</h3>
+                    <div id="badge-showcase"></div>
+                </div>
+                <div>
+                    <h3 class="section-subtitle">🔥 Daily Streak</h3>
+                    <div id="streak-counter"></div>
+                    <div id="mini-leaderboard" style="margin-top: 24px;"></div>
                 </div>
             </div>
         </div>
@@ -199,6 +236,105 @@
         </div>
     </section>
 
+    <!-- AI Tutor Chat Section -->
+    <section id="ai-tutor" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">💬 AI Tutor Chat</h2>
+                <p class="section-description">Ask questions and get instant help from your intelligent AI tutor</p>
+            </div>
+
+            <div class="chat-embed-container">
+                <iframe id="chat-iframe" src="chat.html" title="AI Tutor Chat"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Dashboard Section -->
+    <section id="progress" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📊 My Progress Dashboard</h2>
+                <p class="section-description">Track your learning journey and see how you're improving</p>
+            </div>
+
+            <div class="progress-header">
+                <input type="text" id="student-id" class="form-input" placeholder="Enter Student ID" value="student_123">
+                <button class="btn btn-primary" onclick="loadProgressDashboard()">Load Dashboard</button>
+            </div>
+
+            <div id="progress-loading" class="loading-state" style="display: none;">
+                <span class="spinner-large"></span>
+                <p>Loading your progress...</p>
+            </div>
+
+            <div id="progress-dashboard" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card-large">
+                        <div class="stat-header">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-title">Overall Accuracy</span>
+                        </div>
+                        <div class="stat-value-large" id="overall-accuracy">0%</div>
+                        <div class="stat-detail" id="total-attempts">0 quizzes taken</div>
+                    </div>
+                    <div class="stat-card-large">
+                        <div class="stat-header">
+                            <span class="stat-icon">💪</span>
+                            <span class="stat-title">Strongest Topic</span>
+                        </div>
+                        <div class="stat-value-medium" id="strongest-topic">N/A</div>
+                        <div class="stat-detail">Keep it up!</div>
+                    </div>
+                    <div class="stat-card-large">
+                        <div class="stat-header">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-title">Focus Area</span>
+                        </div>
+                        <div class="stat-value-medium" id="weakest-topic">N/A</div>
+                        <div class="stat-detail">Needs improvement</div>
+                    </div>
+                </div>
+
+                <div class="feedback-section">
+                    <h3 class="section-subtitle">💡 Personalized Insights</h3>
+                    <div class="feedback-cards">
+                        <div class="feedback-card strength-card">
+                            <div class="feedback-icon">✨</div>
+                            <div class="feedback-content">
+                                <h4>Your Strengths</h4>
+                                <p id="strength-feedback">Loading insights...</p>
+                            </div>
+                        </div>
+                        <div class="feedback-card weakness-card">
+                            <div class="feedback-icon">🎯</div>
+                            <div class="feedback-content">
+                                <h4>Areas to Improve</h4>
+                                <p id="weakness-feedback">Loading insights...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3 class="chart-title">📈 Weekly Accuracy Trend</h3>
+                        <canvas id="weeklyTrendChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3 class="chart-title">🎯 Topic Performance</h3>
+                        <canvas id="topicRadarChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="difficulty-section">
+                    <h3 class="section-subtitle">🔥 Difficulty Breakdown</h3>
+                    <div class="difficulty-bars" id="difficulty-bars"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Daily Problem Section -->
     <section id="daily-problem" class="section">
         <div class="container">
@@ -257,9 +393,34 @@
     <script src="js/config.js"></script>
     <script src="js/api.js"></script>
     <script src="js/utils.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/gamification.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/quiz.js"></script>
     <script src="js/knowledgeGraph.js"></script>
     <script src="js/dailyProblem.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/chatEmbed.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('🚀 Initializing Studdy Buddy AI...');
+            
+            try {
+                // Initialize notification system first
+                if (typeof initNotificationSystem === 'function') {
+                    initNotificationSystem();
+                    console.log('✅ Notification system initialized');
+                }
+                
+                // Then initialize gamification
+                if (typeof initGamification === 'function') {
+                    await initGamification();
+                    console.log('✅ Gamification initialized');
+                }
+            } catch (error) {
+                console.error('❌ Initialization error:', error);
+            }
+        });
+    </script>
 </body>
 </html>

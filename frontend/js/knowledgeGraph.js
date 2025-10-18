@@ -49,6 +49,8 @@ class KnowledgeGraphGenerator {
         event.preventDefault();
         
         const requestData = {};
+        const studentId = sessionStorage.getItem('student_id') || 'student_' + Math.random().toString(36).substr(2, 9);
+        if (!sessionStorage.getItem('student_id')) sessionStorage.setItem('student_id', studentId);
         
         if (this.currentInputType === 'topic') {
             const topic = document.getElementById('kg-topic').value.trim();
@@ -69,9 +71,11 @@ class KnowledgeGraphGenerator {
         setButtonLoading(this.generateButton, true);
 
         try {
-            const response = await api.post(CONFIG.ENDPOINTS.KNOWLEDGE_GRAPH_GENERATE, requestData);
+            const url = `${CONFIG.ENDPOINTS.KNOWLEDGE_GRAPH_GENERATE}?student_id=${studentId}`;
+            const response = await api.post(url, requestData);
             this.displayGraph(response);
             showToast('success', 'Graph Generated!', 'Knowledge graph created successfully');
+            if (typeof refreshGamification === 'function') await refreshGamification();
         } catch (error) {
             showToast('error', 'Generation Failed', error.message);
             console.error('Knowledge Graph Error:', error);

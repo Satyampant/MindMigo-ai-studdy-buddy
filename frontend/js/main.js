@@ -38,9 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Brand logo click - navigate to home
-    document.querySelector('.nav-brand').addEventListener('click', () => {
-        navigateToSection('home');
-    });
+    const navBrand = document.querySelector('.nav-brand');
+    if (navBrand) {
+        navBrand.addEventListener('click', () => {
+            navigateToSection('home');
+        });
+    }
+    
+    // Hero section CTA buttons
+    const heroAITutorBtn = document.getElementById('hero-ai-tutor-btn');
+    const heroQuizBtn = document.getElementById('hero-quiz-btn');
+    
+    if (heroAITutorBtn) {
+        heroAITutorBtn.addEventListener('click', () => navigateToSection('ai-tutor'));
+    }
+    
+    if (heroQuizBtn) {
+        heroQuizBtn.addEventListener('click', () => navigateToSection('quiz'));
+    }
     
     // Handle initial navigation based on URL hash
     const hash = window.location.hash.substring(1);
@@ -63,19 +78,23 @@ async function checkBackendConnection() {
         const response = await fetch(`${CONFIG.API_BASE_URL}/`);
         if (response.ok) {
             console.log('✅ Connected to backend successfully');
+            const data = await response.json();
+            console.log('Backend:', data.message);
         } else {
-            console.warn('⚠️ Backend responded with error');
+            console.warn('⚠️ Backend responded with error:', response.status);
             showToast('warning', 'Backend Warning', 'Backend may not be fully functional');
         }
     } catch (error) {
         console.error('❌ Failed to connect to backend:', error);
-        showToast('error', 'Connection Error', 'Cannot connect to backend. Please ensure the server is running.');
+        showToast('error', 'Backend Not Connected', 'Please start the backend server: uvicorn main:app --reload');
     }
 }
 
 // Check connection when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    checkBackendConnection();
+    setTimeout(() => {
+        checkBackendConnection();
+    }, 500);
 });
 
 // Expose navigation function globally for use in HTML

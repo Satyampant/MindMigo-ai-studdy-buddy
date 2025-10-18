@@ -11,5 +11,10 @@ wheels/
 .env
 
 *.ipynb
+*.db
 
 logs/
+results/
+SETUP_GUIDE.md
+
+HACKATHON_PROJECT_DESCRIPTION.md

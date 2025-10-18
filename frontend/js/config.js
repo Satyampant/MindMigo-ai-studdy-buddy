@@ -5,7 +5,11 @@ const CONFIG = {
         QUIZ_GENERATE: '/quiz/generate',
         KNOWLEDGE_GRAPH_GENERATE: '/knowledge-graph/generate',
         KNOWLEDGE_GRAPH_RENDER: '/knowledge-graph/render',
-        DAILY_PROBLEM: '/daily-problem'
+        DAILY_PROBLEM: '/daily-problem',
+        DAILY_PROBLEM_SUBMIT: '/daily-problem/submit',
+        PROGRESS_RECORD: '/progress/record',
+        PROGRESS_ANALYTICS: '/progress/analytics',
+        PROGRESS_ANALYTICS_AI: '/progress/analytics'
     },
     TOAST_DURATION: 5000,
     STORAGE_KEYS: {
